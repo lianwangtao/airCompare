@@ -1,3 +1,19 @@
-body {
-  display: block;
+.body {
+  font-family: 'Roboto';
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;;
+}
+p, div {
+    font-family: 'Roboto', sans-serif;;
+}
+
+
+.searchbarwide {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 100px;
+  padding-bottom: 200px;
 }
