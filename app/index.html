@@ -1,0 +1,47 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material requires Angular.js & jQuery Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+  <!-- Angular Material Icons -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script>
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- Local files -->
+  <script src="app.js"></script>
+  <link rel="stylesheet" src="app.css">
+</head>
+<body ng-app="airCompare" ng-cloak>
+  <!--
+    Your HTML content here
+  -->
+  <div ng-controller="AppCtrl" ng-cloak>
+    <md-content>
+    <md-toolbar class="md-primary md-hue-1">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span style="color:white;">AirCompare</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button">
+          <ng-md-icon icon="favorite" style="fill:white;"></ng-md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="More">
+          <ng-md-icon icon="more_vert" style="fill:white;"></ng-md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+  </md-content>
+
+  </div>
+</body>
+</html>
