@@ -7,25 +7,23 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <!-- Angular Material Library -->
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
-  <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
-  <!-- Angular Material Icons -->
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script>
-  <!-- Bootstrap -->
+
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <!-- Google Fonts -->
+
   <link href='https://fonts.googleapis.com/css?family=Roboto|Open+Sans' rel='stylesheet' type='text/css'>
-  <!-- Local files -->
+
+  <script src="constants.js"></script>
   <script src="app.js"></script>
+  <script src="config.js"></script>
   <link rel="stylesheet" type="text/css" href="app.css">
 </head>
+
 <body ng-app="airCompare" ng-cloak>
-  <!--
-    Your HTML content here
-  -->
   <div ng-controller="AppCtrl" ng-cloak>
     <md-toolbar class="bar md-primary md-hue-1">
       <div class="md-toolbar-tools">
@@ -41,7 +39,7 @@
         </md-button>
       </div>
     </md-toolbar>
-
+    
       <div class="searchbarwide" ng-controller="DemoCtrl as ctrl"  layout-align="center center">
         <form ng-submit="$event.preventDefault()">
         <md-autocomplete
@@ -113,6 +111,7 @@
               </div>
             </div>
           </div>
+
     </div>
   </div>
 </body>
