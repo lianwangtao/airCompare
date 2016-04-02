@@ -2,6 +2,10 @@
   font-family: 'Roboto';
 }
 
+ul {
+  list-style: none;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;;
@@ -12,8 +16,8 @@ p, div {
 
 
 .searchbarwide {
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 20%;
+  padding-right: 20%;
   padding-top: 100px;
   padding-bottom: 200px;
 }

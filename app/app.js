@@ -35,7 +35,23 @@ var app = angular.module('airCompare',['ngMaterial','ngMdIcons'])
 
 //Controller for Angualr Material Dialog
 app.controller('AppCtrl', function($scope) {
+
 });
+
+//Controller for API Call
+app.controller('resultListCtrl', ['$scope','$http', function($scope, $http) {
+  var result =
+  "DateIssue","DateForecast","ReportingArea","StateCode","Latitude","Longitude","ParameterName","AQI","CategoryNumber","CategoryName","ActionDay","Discussion"
+"2016-03-30 ","2016-04-01 ","Madison","WI","43.12","-89.36","PM2.5","-1","1","Good","false",""
+"2016-03-30 ","2016-04-02 ","Madison","WI","43.12","-89.36","PM2.5","-1","1","Good","false",""
+"2016-03-30 ","2016-04-03 ","Madison","WI","43.12","-89.36","PM2.5","-1","1","Good","false",""
+"2016-03-30 ","2016-04-04 ","Madison","WI","43.12","-89.36","PM2.5","-1","1","Good","false",""};
+  // var url = 'http://www.airnowapi.org/aq/forecast/zipCode/?format=text/csv&zipCode=53715&date=2016-04-01&distance=25&API_KEY=8857D6C9-5DDA-45C7-9A21-942A36D128B5';
+  // $http.get(url).success(function(data) {
+  //   $scope.result = data;
+  // });
+  console.log(result);
+}]);
 
 
 //Controller for autocompelete
