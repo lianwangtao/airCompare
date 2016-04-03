@@ -13,23 +13,24 @@ app.controller('AppCtrl', function($scope) {
 //Controller for API Call
 app.controller('resultListCtrl', ['$scope','$http', function($scope, $http) {
 
-  // $http({
-  //   method: 'GET',
-  //   url:"https://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=53715&date=2016-04-03&distance=25&API_KEY=8857D6C9-5DDA-45C7-9A21-942A36D128B5"
-  // }).then(function successCallback(response) {
-  //   // this callback will be called asynchronously
-  //   // when the response is available
-  //   $scope.result = response;
-  // }, function errorCallback(response) {
-  //   // called asynchronously if an error occurs
-  //   // or server returns response with an error status.
-  //   console.log(response);
-  // });
+  $http({
+    method: 'GET',
+    url:"https://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=53715&date=2016-04-03&distance=25&API_KEY=8857D6C9-5DDA-45C7-9A21-942A36D128B5"
+  }).then(function successCallback(response) {
+    // this callback will be called asynchronously
+    // when the response is available
+    JSON.parse(response);
+    $scope.result = response[0];
+  }, function errorCallback(response) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+    console.log(response);
+  });
 
-   $scope.results = [
-  {"DateIssue":"2016-03-30 ","DateForecast":"2016-04-03 ","ReportingArea":"Madison","StateCode":"WI","Latitude":43.12,"Longitude":-89.36,"ParameterName":"PM2.5","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""},
-  {"DateIssue":"2016-03-30 ","DateForecast":"2016-04-04 ","ReportingArea":"Madison","StateCode":"WI","Latitude":43.12,"Longitude":-89.36,"ParameterName":"PM2.5","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""}
-];
+//    $scope.results = [
+//   {"DateIssue":"2016-03-30 ","DateForecast":"2016-04-03 ","ReportingArea":"Madison","StateCode":"WI","Latitude":43.12,"Longitude":-89.36,"ParameterName":"PM2.5","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""},
+//   {"DateIssue":"2016-03-30 ","DateForecast":"2016-04-04 ","ReportingArea":"Madison","StateCode":"WI","Latitude":43.12,"Longitude":-89.36,"ParameterName":"PM2.5","AQI":-1,"Category":{"Number":1,"Name":"Good"},"ActionDay":false,"Discussion":""}
+// ];
 
 }]);
 
