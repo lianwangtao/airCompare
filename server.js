@@ -1,14 +1,29 @@
-var http = require("http");
+'use strict';
 
-var server = http.createServer(function(request, response) {
-  var filePath = false;
+var express = require('express');
+var http = require('http');
+var path = require('path');
+var favicon = require('serve-favicon');
+var morgan = require('morgan'); // formerly express.logger
+var errorhandler = require('errorhandler');
+var app = express();
 
-  if (request.url == '/') {
-    filePath = "app/index.html";
-  } else {
-    filePath = "app" + request.url;
-  }
+// all environments
+app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname, 'views'));
+app.engine('html', require('ejs').renderFile);
 
-  var absPath = "./" + filePath;
+// express/connect middleware
+app.use(morgan('dev'));
+
+// serve up static assets
+app.use(express.static(path.join(__dirname, 'app')));
+
+// development only
+if ('development' === app.get('env')) {
+  app.use(errorhandler());
+}
+
+http.createServer(app).listen(app.get('port'), function () {
+   console.log('myApp server listening on port ' + app.get('port'));
 });
-var port_number = server.listen(process.env.PORT || 3000);

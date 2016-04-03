@@ -1,4 +1,5 @@
 'use strict';
+
 var app = angular.module('airCompare',['ngMaterial','ngMdIcons']);
 
 //Controller for Angualr Material Dialog
