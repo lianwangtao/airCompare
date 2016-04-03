@@ -19,8 +19,7 @@ app.controller('resultListCtrl', ['$scope','$http', function($scope, $http) {
   }).then(function successCallback(response) {
     // this callback will be called asynchronously
     // when the response is available
-    JSON.parse(response);
-    $scope.result = response[0];
+    $scope.result = response;
   }, function errorCallback(response) {
     // called asynchronously if an error occurs
     // or server returns response with an error status.
