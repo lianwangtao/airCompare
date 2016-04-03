@@ -15,7 +15,7 @@ app.controller('resultListCtrl', ['$scope','$http', function($scope, $http) {
 
   $http({
     method: 'GET',
-    url:"https://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=53715&date=2016-04-03&distance=25&API_KEY=8857D6C9-5DDA-45C7-9A21-942A36D128B5"
+    url:"http://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=20002&date=2016-04-03&distance=25&API_KEY=8857D6C9-5DDA-45C7-9A21-942A36D128B5"
   }).then(function successCallback(response) {
     // this callback will be called asynchronously
     // when the response is available
@@ -23,7 +23,7 @@ app.controller('resultListCtrl', ['$scope','$http', function($scope, $http) {
   }, function errorCallback(response) {
     // called asynchronously if an error occurs
     // or server returns response with an error status.
-    console.log(response);
+    console.log("error callback" + response);
   });
 
 //    $scope.results = [
