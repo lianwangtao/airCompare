@@ -9,14 +9,14 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
-
+  <!-- Angular Material Icons -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script>
-
+  <!-- Bootstrap -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-  <link href='https://fonts.googleapis.com/css?family=Roboto|Open+Sans' rel='stylesheet' type='text/css'>
-
+  <!-- Google Fonts -->
+  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto|Open+Sans' rel='stylesheet' type='text/css'> -->
+  <!-- Locals -->
   <script src="constants.js"></script>
   <script src="app.js"></script>
   <script src="config.js"></script>
@@ -39,7 +39,7 @@
         </md-button>
       </div>
     </md-toolbar>
-    
+
       <div class="searchbarwide" ng-controller="DemoCtrl as ctrl"  layout-align="center center">
         <form ng-submit="$event.preventDefault()">
         <md-autocomplete
@@ -67,50 +67,26 @@
           </md-input-container> -->
       </div>
 
-      <div class="cards" layout="row" layout-align="center center" ng-controller='resultListCtrl'>
-          <div layout="column">
-            <div layout="row" layout-align="center center">
-              <div class="card">
-                <md-card>
-                  <md-card-title>
-                    <md-card-title-text>
-                      <span class="md-headline">Card with image</span>
-                    </md-card-title-text>
-                  </md-card-title>
-                  <md-card-actions layout="row" layout-align="center center">
-                    <md-button>Action 1</md-button>
-                    <md-button>Action 2</md-button>
-                  </md-card-actions>
-                </md-card>
-              </div>
-              <div class="card">
-                <md-card>
-                  <md-card-title>
-                    <md-card-title-text>
-                      <span class="md-headline">Card with image</span>
-                    </md-card-title-text>
-                  </md-card-title>
-                  <md-card-actions layout="row" layout-align="center center">
-                    <md-button>Action 1</md-button>
-                    <md-button>Action 2</md-button>
-                  </md-card-actions>
-                </md-card>
-              </div>
-              <div class="card">
-                <md-card>
-                  <md-card-title>
-                    <md-card-title-text>
-                      <span class="md-headline">Card with image</span>
-                    </md-card-title-text>
-                  </md-card-title>
-                  <md-card-actions layout="row" layout-align="center center">
-                    <md-button>Action 1</md-button>
-                    <md-button>Action 2</md-button>
-                  </md-card-actions>
-                </md-card>
-              </div>
-            </div>
+
+      <div class="cards" ng-controller="resultListCtrl">
+      <md-list layout="row" layout-align="center center">
+        <md-list-item ng-repeat="result in results" style="display: inline-block;"  >
+          <div class="card">
+            <md-card>
+              <md-card-title>
+                <md-card-title-text>
+                  <span class="md-headline">{{result.StateCode}}</span>
+                </md-card-title-text>
+              </md-card-title>
+              <md-card-actions layout="row" layout-align="center center">
+                <md-button>Action 1</md-button>
+                <md-button>Action 2</md-button>
+              </md-card-actions>
+            </md-card>
           </div>
+        </md-list-item>
+      </md-list>
+    </div>
 
     </div>
   </div>
